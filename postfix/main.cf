@@ -1,0 +1,9 @@
+inet_interfaces = all
+
+inet_protocols = ipv4
+
+myhostname = localhost
+mydestination = $myhostname, localhost.localdomain, localhost
+
+# minimalではsyslogが動いていないため、明示的に指定する必要がある
+maillog_file = /var/log/maillog

@@ -39,3 +39,6 @@ out/
 ### MySQL ###
 mysql/data
 mysql/mysql-variables.env
+
+### Postfix ###
+postfix/log
