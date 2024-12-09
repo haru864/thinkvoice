@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: thinkvoice
+  datasource:
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  flyway:
+    enabled: true
+    url: ${MYSQL_URL}
+    schemas: ${MYSQL_SCHEMA}
+    defaultSchema: ${MYSQL_SCHEMA}
+    user: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    baseline-on-migrate: true
+    baseline-version: 0
+    locations: "classpath:db/migration,classpath:db/mock-data"
+  mail:
+    host: postfix
+    port: 25
