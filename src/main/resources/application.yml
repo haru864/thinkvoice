@@ -12,16 +12,16 @@ spring:
       properties:
         hibernate:
           dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-#  flyway:
-#    enabled: true
-#    url: ${MYSQL_URL}
-#    schemas: ${MYSQL_SCHEMA}
-#    defaultSchema: ${MYSQL_SCHEMA}
-#    user: ${MYSQL_USERNAME}
-#    password: ${MYSQL_PASSWORD}
-#    baseline-on-migrate: true
-#    baseline-version: 0
-#    locations: "classpath:db/migration,classpath:db/mock-data"
+  flyway:
+    enabled: true
+    url: ${MYSQL_URL}
+    schemas: ${MYSQL_SCHEMA}
+    defaultSchema: ${MYSQL_SCHEMA}
+    user: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    baseline-on-migrate: true
+    baseline-version: 0
+    locations: "classpath:db/migration,classpath:db/mock-data"
   mail:
     host: postfix
     port: 25
